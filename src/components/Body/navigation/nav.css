@@ -1,0 +1,11 @@
+.tab{
+    display: flex;
+    border-bottom: 5px solid #E5E5E5;
+    padding: 10px;
+    justify-content: space-around;
+   
+    /* margin: 0px -10px; */
+    }
+  .tab1{
+    color: #DF3856;
+  }

@@ -1,0 +1,15 @@
+.user
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+}
+.name-of-user{
+  display: flex;
+  margin-right: 10px;
+  flex-direction: column;
+}
+.city{
+  margin-right: 3px;
+}

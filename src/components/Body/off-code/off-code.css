@@ -1,0 +1,13 @@
+.button2{
+    direction: ltr;
+    margin-top: 30px;
+  }
+  .off-button{
+    background: #EEEEEE;
+    border-radius: 100px;
+    direction: rtl;
+    padding: 5px;
+    font-weight: 800;
+    margin: 0 10px;
+    
+  }
