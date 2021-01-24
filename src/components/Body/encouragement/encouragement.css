@@ -1,16 +1,15 @@
-.Encouragement{
-    background-color: #DFF5F1;
-    color: #00786C;
-    display: flex;
-    margin: 0 10px;
-    margin-top: 15px;
-    }
-    .text-of-Encouragement
-    {
-    margin: 0;
-      margin-right: 10px;
-      padding: 5px;
-    }
-    .text-of-Encouragement2{
-        font-weight: 600;
-      }
+.Encouragement {
+  background-color: #dff5f1;
+  color: #00786c;
+  display: flex;
+  margin: 0 10px;
+  margin-top: 15px;
+}
+.text-of-Encouragement {
+  margin: 0;
+  margin-right: 10px;
+  padding: 5px;
+}
+.text-of-Encouragement2 {
+  font-weight: 600;
+}

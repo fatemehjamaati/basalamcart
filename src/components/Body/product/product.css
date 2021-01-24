@@ -1,71 +1,70 @@
+.food {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+.text-of-food {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px;
+}
+.foodname {
+  margin-right: 25px;
+}
+.price {
+  align-self: flex-end;
+}
+.del {
+  color: #9d9d9d;
+  text-decoration: line-through;
+}
+.pm {
+  padding: 0 10px;
+  display: flex;
+  border-bottom: 2px solid #e5e5e5;
+}
+.minibtn {
+  border-radius: 100%;
+  padding: 5px;
+  display: flex;
+}
+.minibtn > img {
+  width: 24px;
+}
 
-.food{
-    display: flex;
-    flex-direction: row;
-    margin-top: 40px;
-    justify-content: space-around;
-    padding: 0 10px;
-  }
-  .text-of-food{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0px ;
-  }
-  .foodname{
-    margin-right: 25px;
-  }
-  .price{
-    align-self: flex-end;
-  }
-  .del{
-    color: #9d9d9d;
-    text-decoration: line-through;
-  }
-  .pm{
-    padding: 0 10px;
-    display: flex;
-    border-bottom: 2px solid #E5E5E5;
-  }
-  .minibtn{
-    border-radius: 100%;
-    padding: 5px;
-    display: flex;
-  }
-  .minibtn > img{
-    width: 24px;
-  }
+.number-of-food {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 18px;
+  height: 22px;
+  align-items: center;
+  display: flex;
+  margin: auto 6px;
+}
+.icons {
+  display: flex;
+  align-items: center;
+}
+.saving {
+  margin-right: auto;
+}
+.underline {
+  text-decoration: underline dotted gray;
+}
+button {
+  all: unset;
+  font-family: IRANSans;
+  border: none;
+}
+.delete {
+  margin-right: 5px;
+}
 
-  .number-of-food{
-    border: 1px solid #EEEEEE;
-    box-sizing: border-box;
-    border-radius: 6px;
-    width: 18px;
-    height: 22px;
-    align-items: center;
-    display: flex;
-    margin: auto 6px;
-  }
-  .icons{
-    display: flex;
-    align-items: center;
-  }
-  .saving{
-    margin-right: auto;
-  }
-  .underline{
-    text-decoration: underline  dotted gray;
-  }
-  button {
-    all: unset;
-    font-family: IRANSans;
-    border: none;
-  }
-  .delete{
-    margin-right: 5px;
-  }
-  
-  .mines{
-    padding-right: 0px;
-  }
+.mines {
+  padding-right: 0px;
+}

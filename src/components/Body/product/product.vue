@@ -20,19 +20,15 @@
         <button class="minibtn mines">
           <img
             src="@/assets/image/menha.svg"
-            onmouseup="onMouseUpEvent()"
-            onmousedown="onMouseDownEvent(false,0)"
-            onclick="onCounterClickHandler(false,0)"
+            @click.prevent="decrementCounter"
           />
         </button>
-        <div class="number-of-food">1</div>
+        <div class="number-of-food">{{ product.count }}</div>
 
         <button class="minibtn">
           <img
             src="@/assets/image/pelus.svg"
-            onmouseup="onMouseUpEvent()"
-            onmousedown="onMouseDownEvent(true,0)"
-            onclick="onCounterClickHandler(true,0)"
+            @click.prevent="incrementCounter"
           />
         </button>
         <button class="minibtn delete">
@@ -49,16 +45,16 @@
 <script>
 export default {
   props: ["product"],
-  data() {
-    return{
-        
-    };
-  },
+ 
   methods: {
-
-  },
-};
+    incrementCounter() {
+      this.$store.dispatch('incrementCounter',this.product.id)
+      
+    },
+    decrementCounter () {
+      this.$store.dispatch('decrementCounter',this.product.id)
+    }
+}}
 </script>
 
-<style src="@/components/Body/product/product.css">
-</style>
+<style src="@/components/Body/product/product.css"/>
