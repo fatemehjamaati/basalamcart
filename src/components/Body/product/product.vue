@@ -21,6 +21,8 @@
           <img
             src="@/assets/image/menha.svg"
             @click.prevent="decrementCounter"
+            @mousedown="onmousDownDec"
+            @mouseup="onmoueUpDec"
           />
         </button>
         <div class="number-of-food">{{ product.count }}</div>
@@ -29,10 +31,12 @@
           <img
             src="@/assets/image/pelus.svg"
             @click.prevent="incrementCounter"
+            @mousedown="onmousDown"
+            @mouseup="onmoueUp"
           />
         </button>
         <button class="minibtn delete">
-          <img src="@/assets/image/Button.svg" />
+          <img src="@/assets/image/Button.svg" @click.prevent="deleteItem" />
         </button>
       </div>
       <div class="saving">
@@ -45,16 +49,44 @@
 <script>
 export default {
   props: ["product"],
- 
+  data: {
+    myTime: null,
+    myTimeDec: null,
+  },
+  
   methods: {
+    
     incrementCounter() {
-      this.$store.dispatch('incrementCounter',this.product.id)
-      
+      this.$store.dispatch("incrementCounter", this.product.id);
     },
-    decrementCounter () {
-      this.$store.dispatch('decrementCounter',this.product.id)
-    }
-}}
+    decrementCounter() {
+      this.$store.dispatch("decrementCounter", this.product.id);
+    },
+    deleteItem() {
+      this.$store.dispatch("deleteItem", this.product.id);
+    },
+    onmousDown() {
+      let sTimer = 400;
+      this.myTime = setInterval(() => {
+        if (sTimer >= 40) sTimer = sTimer*0.7;
+        this.product.count+=1
+      }, sTimer);
+    },
+    onmoueUp() {
+      clearInterval(this.myTime);
+    },
+    onmousDownDec() {
+      let sTimer = 400;
+      this.myTimeDec = setInterval(() => {
+        if (sTimer >= 40) sTimer = sTimer;
+        if (this.product.count >1) this.product.count -= 1;
+      }, sTimer);
+    },
+    onmoueUpDec() {
+      clearInterval(this.myTimeDec);
+    },
+  },
+};
 </script>
 
 <style src="@/components/Body/product/product.css"/>

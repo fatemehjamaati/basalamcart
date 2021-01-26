@@ -7,7 +7,9 @@
         "storname": "خوشمزه های خاتون",
         "username": "مینو همگام",
         "city": "سعادت شهر",
-        "userimg": "https://s16.picofile.com/file/8422060618/avatar1.png"
+        "userimg": "https://s16.picofile.com/file/8422060618/avatar1.png",
+        "offcode":true
+        
       },
 
 
@@ -18,7 +20,7 @@
           "productname": "سوسیس آلمانی پنیری",
           "productimg": "https://s17.picofile.com/d/8422060492/5883ac14-d495-42b6-8ce7-7048ed03f10f/sosis_almani_paniri_pic.svg",
           "price": "۸۵۰۰۰",
-          "afterprice": "۷۵۰۰۰"
+          "afterprice": "75000"
         },
 
          {"id":"pr2",
@@ -26,7 +28,7 @@
           "productname": "کالباس پسته",
           "productimg": "https://s17.picofile.com/d/8422060200/97802dca-d53f-40f5-a5a9-efd8aefa21e3/kalbas_peste_pic.svg",
           "price": "۸۵۰۰۰",
-          "afterprice": "۷۵۰۰۰"
+          "afterprice": "75000"
         }
       ],
 
@@ -52,7 +54,8 @@
         "storname": "محصولات غذایی ولیک",
         "username": "سارا خوشدل",
         "city": "بوشهر",
-        "userimg": "https://s16.picofile.com/file/8422060634/avatar2.png"
+        "userimg": "https://s16.picofile.com/file/8422060634/avatar2.png",
+        "offcode":false
       },
 
       "product": [
@@ -61,7 +64,7 @@
           "productname": "سوسیس آلمانی پنیری",
           "productimg": "https://s17.picofile.com/d/8422060492/5883ac14-d495-42b6-8ce7-7048ed03f10f/sosis_almani_paniri_pic.svg",
           "price": "۸۵۰۰۰",
-          "afterprice": "۷۵۰۰۰"
+          "afterprice": "75000"
         }
 
       ],

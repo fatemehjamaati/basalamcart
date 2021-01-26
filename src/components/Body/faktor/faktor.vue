@@ -6,7 +6,7 @@
       </div>
       <div class="a2">
         <p>جمع مبلغ برای {{ faktor.faktor1 }} کالا</p>
-        <p class="p1">{{ faktor.faktor2 }} تومان</p>
+        <p class="p1">{{}} تومان</p>
       </div>
     </div>
   </div>
