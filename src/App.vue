@@ -1,21 +1,23 @@
 <template>
   <div id="app">
-
     <Header />
-    <Body/>
+    <Nav />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header/Header.vue';
-import Body from  '@/components/Body/Body.vue';
+import Header from "@/components/Header";
+import Nav from "@/components/Navigation";
+
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
-     Body
-  }
-}
+    Nav,
+  
+  },
+};
 </script>
 <style scoped src="@/assets/css/boot.css"/>
 

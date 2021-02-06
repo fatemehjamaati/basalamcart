@@ -1,0 +1,32 @@
+.selectadd {
+  justify-content: space-around;
+  background-color: white;
+  max-width: 360px;
+  box-sizing: border-box;
+  margin: auto;
+}
+.manageadd {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.address {
+  display: flex;
+}
+.add {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+.newaddress {
+  all: unset;
+  margin-left: 10px;
+  border: 1px solid gray;
+  border-radius: 100px;
+  padding: 5px 17px;
+  display: flex;
+  align-items: center;
+}
+.newaddress > span {
+  display: block;
+}

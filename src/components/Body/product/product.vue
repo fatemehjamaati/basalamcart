@@ -7,8 +7,8 @@
           <span class="foodname">{{ product.productname }}</span>
         </div>
         <div class="price">
-          <span class="del">{{ product.price }}</span> &#160;{{
-            product.afterprice
+          <span class="del">{{ product.price*product.count }}</span> &#160;{{
+            product.afterprice*product.count
           }}
           تومان
         </div>
@@ -49,38 +49,43 @@
 <script>
 export default {
   props: ["product"],
-  data: {
+  data() {
+    return {
     myTime: null,
     myTimeDec: null,
+    sTimer:400,
+    }
   },
   
   methods: {
     
     incrementCounter() {
       this.$store.dispatch("incrementCounter", this.product.id);
+      this.$store.getters.sumproduct
     },
     decrementCounter() {
       this.$store.dispatch("decrementCounter", this.product.id);
+      this.$store.getters.sumproduct
     },
     deleteItem() {
       this.$store.dispatch("deleteItem", this.product.id);
     },
     onmousDown() {
-      let sTimer = 400;
+     
       this.myTime = setInterval(() => {
-        if (sTimer >= 40) sTimer = sTimer*0.7;
+        if (this.sTimer >= 40) this.sTimer = this.sTimer*0.7;
         this.product.count+=1
-      }, sTimer);
+      }, this.sTimer);
     },
     onmoueUp() {
       clearInterval(this.myTime);
     },
     onmousDownDec() {
-      let sTimer = 400;
+    
       this.myTimeDec = setInterval(() => {
-        if (sTimer >= 40) sTimer = sTimer;
+        if (this.sTimer >= 40) this.sTimer = this.sTimer*0.7;
         if (this.product.count >1) this.product.count -= 1;
-      }, sTimer);
+      }, this.sTimer);
     },
     onmoueUpDec() {
       clearInterval(this.myTimeDec);

@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
     <header class="header">
       <div class="line1-of-header">
         <div>

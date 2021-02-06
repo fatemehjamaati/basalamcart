@@ -5,8 +5,8 @@
         <button class="button3">ادامه خرید فقط از این غرفه</button>
       </div>
       <div class="a2">
-        <p>جمع مبلغ برای {{ faktor.faktor1 }} کالا</p>
-        <p class="p1">{{}} تومان</p>
+        <p>جمع مبلغ برای {{ faktor.count }} کالا</p>
+        <p class="p1">{{faktor.totalPrice.toLocaleString()}} تومان</p>
       </div>
     </div>
   </div>
@@ -14,7 +14,15 @@
 
 <script>
 export default {
-  props: ["faktor"],
+  props: {
+    faktor: {
+      type: Object,
+      require: true,
+    },
+  },
+  mounted() {
+    this.$store.getters.sumproduct;
+  },
 };
 </script>
 

@@ -19,7 +19,7 @@
           "count":1,
           "productname": "سوسیس آلمانی پنیری",
           "productimg": "https://s17.picofile.com/d/8422060492/5883ac14-d495-42b6-8ce7-7048ed03f10f/sosis_almani_paniri_pic.svg",
-          "price": "۸۵۰۰۰",
+          "price": "85000",
           "afterprice": "75000"
         },
 
@@ -27,22 +27,18 @@
           "count": 1,
           "productname": "کالباس پسته",
           "productimg": "https://s17.picofile.com/d/8422060200/97802dca-d53f-40f5-a5a9-efd8aefa21e3/kalbas_peste_pic.svg",
-          "price": "۸۵۰۰۰",
+          "price": "85000",
           "afterprice": "75000"
         }
       ],
-
-
-
-
       "encouragement": {
         "encouragement1": "هورا ارسال از این غرفه برای شما",
         "encouragement2": "رایگان شد"
       },
 
       "faktor": {
-        "faktor1": "۲",
-        "faktor2": "۸۵۰۰۰"
+        "count": "3",
+        "totalPrice": "0"
       }
 
 
@@ -63,7 +59,7 @@
           "count": 1,
           "productname": "سوسیس آلمانی پنیری",
           "productimg": "https://s17.picofile.com/d/8422060492/5883ac14-d495-42b6-8ce7-7048ed03f10f/sosis_almani_paniri_pic.svg",
-          "price": "۸۵۰۰۰",
+          "price": "85000",
           "afterprice": "75000"
         }
 
@@ -75,8 +71,8 @@
       },
 
       "faktor": {
-        "faktor1": "۲",
-        "faktor2": "۸۵۰۰۰"
+        "count": "1",
+        "totalPrice": "۸۵۰۰۰"
       }
 
     }

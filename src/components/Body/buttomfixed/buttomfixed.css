@@ -27,3 +27,8 @@
   padding: 14px;
   font-weight: 600;
 }
+/* a {
+  all: unset;
+  color:white;
+  cursor: pointer;
+} */

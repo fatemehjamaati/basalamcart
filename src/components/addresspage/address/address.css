@@ -1,0 +1,17 @@
+.address {
+    margin-right: 5px;
+    padding: 10px 0;
+    width: 286px;
+    font-weight: 400;
+    color:#535353;
+}
+.name{
+    font-weight: 400;
+    color: #3E3E3E;
+}
+.title{
+    justify-content: space-between;
+}
+.container{
+    border-bottom: 2px solid #e5e5e5;
+}
