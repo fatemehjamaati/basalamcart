@@ -1,9 +1,9 @@
 .food {
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
+  margin-top: 30px;
   justify-content: space-around;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 .text-of-food {
   display: flex;
@@ -13,17 +13,21 @@
   padding: 0px;
 }
 .foodname {
-  margin-right: 25px;
+  margin-right: 15px;
+  font-size: 12px;
 }
 .price {
   align-self: flex-end;
+  font-size: 12px;
+  padding-bottom: 20px;
 }
 .del {
   color: #9d9d9d;
   text-decoration: line-through;
+  margin-top: -60px;
 }
 .pm {
-  padding: 0 10px;
+  padding: 13px 15px;
   display: flex;
   border-bottom: 2px solid #e5e5e5;
 }
@@ -49,12 +53,17 @@
 .icons {
   display: flex;
   align-items: center;
+  width: 25px;
 }
 .saving {
   margin-right: auto;
+  color:Gray;
 }
 .underline {
   text-decoration: underline dotted gray;
+}
+.underline > span {
+  padding: 5px;
 }
 button {
   all: unset;
@@ -68,3 +77,4 @@ button {
 .mines {
   padding-right: 0px;
 }
+

@@ -4,7 +4,7 @@
   background-color: white;
   padding: 0 15px;
   box-sizing: border-box;
-  border-bottom: 5px solid #e5e5e5;
+  border-bottom: 8px solid #e5e5e5;
 }
 .line1-of-header {
   display: flex;
@@ -20,9 +20,10 @@
   background-color: #3e3e3e;
   color: white;
   border-radius: 100px;
-  padding: 8px;
+  padding: 10px 20px;
   margin-left: 13px;
   font-family: inherit;
+  font-size: 12px;
 }
 .button svg {
   margin-right: 10px;
@@ -30,7 +31,7 @@
 .search-box {
   position: relative;
   padding: 15px 0;
-  margin-top: -25px;
+  margin-top: -15px;
 }
 .search {
   border: 1px solid #9d9d9d;
@@ -45,3 +46,12 @@
   top: 50%;
   transform: translate(0, -50%);
 }
+.arrow{
+  margin-right: -15px;
+}
+.logos{
+  display: flex;
+}
+/* .sale{
+  display: flex;
+} */

@@ -1,0 +1,8 @@
+.Restaurant-name {
+    font-weight: 900;
+    margin-right: 10px;
+  }
+  .title {
+    display: flex;
+    padding: 0 10px;
+  }

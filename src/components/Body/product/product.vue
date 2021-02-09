@@ -39,8 +39,12 @@
           <img src="@/assets/image/Button.svg" @click.prevent="deleteItem" />
         </button>
       </div>
-      <div class="saving">
-        <p class="underline">ذخیره در لیست خرید بعدی</p>
+      <div class="saving ">
+        <div class="underline">
+        <span >ذخیره در لیست خرید بعدی</span>
+        </div>
+       
+        <!-- <p>ذخیره در لیست خرید بعدی</p> -->
       </div>
     </div>
   </div>

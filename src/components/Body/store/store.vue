@@ -5,8 +5,7 @@
     <p class="Restaurant-name">{{ store.storname }}</p>
   </div>
   <div class="user">
-    <div><img :src="store.userimg" /></div>
-    <!-- <img src="@/assets/image/user.png" alt=""> -->
+    <img :src="store.userimg"/>
     <div class="name-of-user">
       <span>{{ store.username }}</span>
       <span

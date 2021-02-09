@@ -1,83 +1,135 @@
 .pay {
-    display: flex;
-    padding: 10px;
-  }
+  display: flex;
+  padding: 10px;
+}
+.par {
+  padding: 15px;
+}
 .paymentpage {
-    /* justify-content: space-around; */
-    background-color: white;
-    max-width: 360px;
-    box-sizing: border-box;
-    margin: auto;
-  }
-  .offbox {
-    position: relative;
-    padding: 15px 0;
-    margin-top: -25px;
-  }
-  .off {
-    border: 1px solid #9d9d9d;
-    box-sizing: border-box;
-    border-radius: 10px;
-    height: 40px;
-    width: 100%;
-  }
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  .valid{
-      display: flex;
-  }
+  background-color: white;
+  max-width: 360px;
+  box-sizing: border-box;
+  margin: auto;
+}
+.offbox {
+  padding: 5px 5px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  border: 1px solid #9d9d9d;
+  border-radius: 10px;
+}
+
+.off {
+  all: unset;
+  /* height: 40px; */
+  /* width: 100%; */
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.valid {
+  display: flex;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 15px;
+  align-items: center;
+}
+.span1 {
+  padding-right: 10px;
+}
+.par1 {
+  padding: 7px;
+}
+.bank {
+  display: flex;
+  border-bottom: 2px solid #e5e5e5;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0px 10px;
+}
+.radio {
+  width: 50%;
+  margin-bottom: 15px;
+}
+.ok {
+  padding: 5px 17px;
+  border-radius: 100px;
+  background-color: #ccc;
+  font-size: 12px;
+}
+.par3 {
+  padding-right: 10px;
+}
+.pay-btn {
+  color: white;
+  background-color: #df3856;
+  border-radius: 100px;
+
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px 140px;
+}
+.paybtn {
+  position: sticky;
+  bottom: 0px;
+  padding: 15px;
+}

@@ -2,11 +2,13 @@
   background: #df3856;
   border-radius: 100px;
   color: white;
-  padding: 15px;
+  padding: 6px 25px;
+  font-size: 14px;
+
 }
 .continue {
   display: flex;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 .a1 {
   margin-top: 22px;
@@ -17,6 +19,6 @@
   margin-right: auto;
 }
 .p1 {
-  margin: inherit;
+  padding-bottom: 10px;
   font-weight: bold;
 }
