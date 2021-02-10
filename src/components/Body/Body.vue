@@ -18,9 +18,6 @@ export default {
       return this.$store.getters.data;
     },
   },
-  created() {
-    this.$store.commit("addCount");
-  },
 };
 </script>
 

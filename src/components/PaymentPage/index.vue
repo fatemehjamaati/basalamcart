@@ -30,14 +30,14 @@
           </div>
 
           <div class="radio">
-            <input type="radio" id="input2" class="input" name="radio" />
+            <input type="radio" id="input3" class="input" name="radio" />
             <span class="checkmark"></span>
-            <label for="input2">بانک پاسارگاد</label>
+            <label for="input3">بانک پاسارگاد</label>
           </div>
           <div class="radio">
-            <input type="radio" id="input2" class="input" name="radio" />
+            <input type="radio" id="input4" class="input" name="radio" />
             <span class="checkmark"></span>
-            <label for="input2">آسان پرداخت</label>
+            <label for="input4">آسان پرداخت</label>
           </div>
         </div>
         <p class="par3">خلاصه سفارش</p>

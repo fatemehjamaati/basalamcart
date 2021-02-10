@@ -5,5 +5,8 @@
 .title {
   display: flex;
   padding: 0 15px;
-
+  align-items: center;
+}
+.vendor{
+  padding-right: 5px;
 }

@@ -39,8 +39,8 @@ export const store = new Vuex.Store({
   mutations: {
     inseretData(state, data) {
       data.forEach((vendor) => {
-        vendor.totalPrice = null;
-        vendor.count = null;
+        vendor.totalPrice = 0;
+        vendor.count = 0;
         vendor.products.forEach((product) => {
           product.count = 1;
         });
@@ -80,6 +80,16 @@ export const store = new Vuex.Store({
         }
       });
     },
+    sumproduct(state) {
+      state.data.forEach((vendor) => {
+        vendor.totalPrice = vendor.products.reduce((total, item) => {
+          return total + item.count * item.price;
+        }, 0);
+        vendor.count = vendor.products.reduce((total, item) => {
+          return total + item.count;
+        }, 0);
+      });
+    },
   },
 
   actions: {
@@ -94,6 +104,9 @@ export const store = new Vuex.Store({
     },
     inseretData(context, data) {
       context.commit("inseretData", data);
+    },
+    sumproduct(context) {
+      context.commit("sumproduct");
     },
   },
 });

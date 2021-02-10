@@ -5,8 +5,8 @@
         <button class="button3">ادامه خرید فقط از این غرفه</button>
       </div>
       <div class="a2">
-        <p>جمع مبلغ برای 1 کالا</p>
-        <p class="p1">{{sumproduct}} تومان</p>
+        <p>جمع مبلغ برای {{productcount}} کالا</p>
+        <p class="p1">{{factor}} تومان</p>
       </div>
     </div>
   </div>
@@ -16,18 +16,13 @@
 export default {
   props: {
     factor: {
-      type: Object,
+      type: Number,
       require: true,
     },
-  },
-  computed: {
-    sumproduct() {
-      return this.$store.getters.sumproduct;
+    productcount: {
+      type: Number,
     },
   },
-  // created() {
-  //   console.log(this.$store.getters.sumproduct);
-  // },
 };
 </script>
 

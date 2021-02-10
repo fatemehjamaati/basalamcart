@@ -1,33 +1,29 @@
 <template>
   <div>
-      <div class="title">
-      <p>ازغرفه:{{name}}</p>
-      </div>
-      <TheProduct :product="produ" v-for="(produ, index) in vendor.products" :key="index" :produ="produ"/>
+    <div class="title">
+      <p>ازغرفه:</p>
+      <span class="vendor">{{vendor.name}}</span>
+    </div>
+    <TheProduct
+      :product="produ"
+      v-for="(produ, index) in vendor.products"
+      :key="index"
+      :produ="produ"
+    />
   </div>
 </template>
 
 <script>
-import TheProduct from "@/components/PaymentPage/TheProduct"
+import TheProduct from "@/components/PaymentPage/TheProduct";
 export default {
-     components: {
-    TheProduct,    
+  components: {
+    TheProduct,
   },
-    props:{
-    vendor:{
-      type:Object
+  props: {
+    vendor: {
+      type: Object,
     },
-    name:{
-       type:String
-    }
   },
-//    props:{
-//     name:{
-//       type:String
-//     },
-
-// }
-}
+};
 </script>
-
 <style scoped src="@/components/PaymentPage/TheVendor/TheVendor.css"/>

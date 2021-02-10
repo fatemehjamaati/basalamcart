@@ -4,7 +4,7 @@
     <product :product="produ" v-for="(produ, index) in mydata.products" :key="index" />
     <encouragement :encouragement="mydata.encouragement" />
     <offCode />
-    <factor :factor="mydata.factor" />
+    <factor :factor="mydata.totalPrice" :productcount="mydata.count" />
   </div>
 </template>
 
@@ -28,6 +28,9 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  created() {
+    this.$store.dispatch("sumproduct");
   },
 };
 </script>
