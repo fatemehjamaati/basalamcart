@@ -3,7 +3,7 @@
   padding: 10px;
 }
 .par {
-  padding: 15px;
+  padding-right: 15px;
 }
 .paymentpage {
   background-color: white;
@@ -22,16 +22,12 @@
   border: 1px solid #9d9d9d;
   border-radius: 10px;
 }
-
 .off {
   all: unset;
-  /* height: 40px; */
-  /* width: 100%; */
 }
 .slider.round {
   border-radius: 34px;
 }
-
 .slider.round:before {
   border-radius: 50%;
 }
@@ -41,13 +37,11 @@
   width: 60px;
   height: 34px;
 }
-
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -59,7 +53,6 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -71,15 +64,12 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #df3856;
 }
-
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #df3856;
 }
-
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
@@ -95,7 +85,7 @@ input:checked + .slider:before {
   padding-right: 10px;
 }
 .par1 {
-  padding: 7px;
+  padding-right: 15px;
 }
 .bank {
   display: flex;
@@ -113,9 +103,10 @@ input:checked + .slider:before {
   border-radius: 100px;
   background-color: #ccc;
   font-size: 12px;
+  font-weight: 600;
 }
 .par3 {
-  padding-right: 10px;
+  padding-right: 15px;
 }
 .pay-btn {
   color: white;

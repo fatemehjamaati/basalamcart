@@ -1,9 +1,7 @@
 * {
   max-width: 360px;
   margin: auto;
-
   background-color: white;
-  /* padding: 0 8px; */
   box-sizing: border-box;
 }
 body {

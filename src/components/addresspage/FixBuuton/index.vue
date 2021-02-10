@@ -2,14 +2,15 @@
   <div class="continue c1">
     <div>
       <router-link to="/payment">
-        <button class="button3 button4">
-          <a href="">ادامه فرآیند خرید</a>
-        </button>
+        <button class="button3 button4">ادامه فرآیند خرید</button>
       </router-link>
     </div>
     <div class="a2">
-      <p class="p4">مبلغ قابل پرداخت برای {{totalCount}}کالا</p>
-      <p class="p1">{{ total }} <span>تومان</span></p>
+      <p class="p4">مبلغ قابل پرداخت</p>
+      <p class="p1">
+        {{ total }}
+        <span>تومان</span>
+      </p>
     </div>
   </div>
 </template>
@@ -22,10 +23,9 @@ export default {
     },
     totalCount() {
       return this.$store.getters.totalCount;
-    }
+    },
   },
 };
 </script>
 
-<style scoped src="@/components/addresspage/FixBuuton/FixButton.css">
-</style>
+<style scoped src="@/components/addresspage/FixBuuton/FixButton.css"/>

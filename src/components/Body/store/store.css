@@ -24,3 +24,8 @@
 .city {
   margin-right: 3px;
 }
+.userimg{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}

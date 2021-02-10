@@ -1,11 +1,9 @@
 <template>
   <div>
       <div class="title">
-      <p>ازغرفه:{{vendor.store.storname}}</p>
+      <p>ازغرفه:{{name}}</p>
       </div>
-      <TheProduct :product="produ" v-for="(produ, index) in vendor.product" :key="index" :produ="produ"/>
-     
-
+      <TheProduct :product="produ" v-for="(produ, index) in vendor.products" :key="index" :produ="produ"/>
   </div>
 </template>
 
@@ -13,23 +11,23 @@
 import TheProduct from "@/components/PaymentPage/TheProduct"
 export default {
      components: {
-    TheProduct,
-    
+    TheProduct,    
   },
     props:{
     vendor:{
       type:Object
+    },
+    name:{
+       type:String
     }
   },
-//   computed:{
-//   data(){
-//     return this.$store.state.data
-//   }
-// }
+//    props:{
+//     name:{
+//       type:String
+//     },
 
+// }
 }
 </script>
 
-<style scoped src="@/components/PaymentPage/TheVendor/TheVendor.css">
-
-</style>
+<style scoped src="@/components/PaymentPage/TheVendor/TheVendor.css"/>

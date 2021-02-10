@@ -1,17 +1,18 @@
 .address {
-    margin-right: 5px;
-    padding: 10px 0;
-    width: 286px;
-    font-weight: 400;
-    color:#535353;
+  margin-right: 5px;
+  padding: 10px 50px;
+  width: 286px;
+  font-weight: 400;
+  color: #535353;
 }
-.name{
-    font-weight: 400;
-    color: #3E3E3E;
+.name {
+  font-weight: 400;
+  color: #3e3e3e;
 }
-.title{
-    justify-content: space-between;
+.title {
+  justify-content: space-between;
+  padding-right: 55px;
 }
-.container{
-    border-bottom: 2px solid #e5e5e5;
+.container {
+  border-bottom: 2px solid #e5e5e5;
 }

@@ -9,11 +9,10 @@
   display: flex;
   align-items: center;
   padding: 5px 15px;
-  font-weight:600 ;
- font-size: 12px;
-  color: 3E3E3E ;
+  font-weight: 600;
+  font-size: 12px;
+  color: 33ee3e;
 }
-.off-button > svg{
+.off-button > svg {
   padding: 4px;
-
 }

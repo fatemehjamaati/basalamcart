@@ -1,14 +1,17 @@
 <template>
   <div>
     <div class="food">
-      <div><img :src="product.productimg" /></div>
+      <div>
+        <img class="pruductimg" :src="product.image.url" />
+      </div>
       <div class="text-of-food">
         <div>
-          <span class="foodname">{{ product.productname }}</span>
+          <span class="foodname">{{ product.name }}</span>
         </div>
         <div class="price">
-          <span class="del">{{ product.price*product.count }}</span> &#160;{{
-            product.afterprice*product.count
+          <span class="del">{{ product.primaryPrice*product.count }}</span>
+          &#160;{{
+          product.price*product.count
           }}
           تومان
         </div>
@@ -39,12 +42,10 @@
           <img src="@/assets/image/Button.svg" @click.prevent="deleteItem" />
         </button>
       </div>
-      <div class="saving ">
+      <div class="saving">
         <div class="underline">
-        <span >ذخیره در لیست خرید بعدی</span>
+          <span>ذخیره در لیست خرید بعدی</span>
         </div>
-       
-        <!-- <p>ذخیره در لیست خرید بعدی</p> -->
       </div>
     </div>
   </div>
@@ -52,43 +53,46 @@
 
 <script>
 export default {
-  props: ["product"],
+  props: {
+    product: {
+      type: Object,
+      require: true,
+    },
+  },
+
   data() {
     return {
-    myTime: null,
-    myTimeDec: null,
-    sTimer:400,
-    }
+      myTime: null,
+      myTimeDec: null,
+      sTimer: 400,
+    };
   },
-  
+
   methods: {
-    
     incrementCounter() {
       this.$store.dispatch("incrementCounter", this.product.id);
-      this.$store.getters.sumproduct
+      this.$store.getters.sumproduct;
     },
     decrementCounter() {
       this.$store.dispatch("decrementCounter", this.product.id);
-      this.$store.getters.sumproduct
+      this.$store.getters.sumproduct;
     },
     deleteItem() {
       this.$store.dispatch("deleteItem", this.product.id);
     },
     onmousDown() {
-     
       this.myTime = setInterval(() => {
-        if (this.sTimer >= 40) this.sTimer = this.sTimer*0.7;
-        this.product.count+=1
+        if (this.sTimer >= 40) this.sTimer = this.sTimer * 0.7;
+        if (this.product.count < this.product.stock) this.product.count += 1;
       }, this.sTimer);
     },
     onmoueUp() {
       clearInterval(this.myTime);
     },
     onmousDownDec() {
-    
       this.myTimeDec = setInterval(() => {
-        if (this.sTimer >= 40) this.sTimer = this.sTimer*0.7;
-        if (this.product.count >1) this.product.count -= 1;
+        if (this.sTimer >= 40) this.sTimer = this.sTimer * 0.7;
+        if (this.product.count > 1) this.product.count -= 1;
       }, this.sTimer);
     },
     onmoueUpDec() {

@@ -1,10 +1,10 @@
 <template>
-  <div v-if="mydata.product.length!=0">
-    <store :store="mydata.store"/>
-    <product :product="produ" v-for="(produ, index) in mydata.product" :key="index" />
+  <div v-if="mydata.products.length!=0">
+    <store :name="mydata.name" :owner="mydata.owner" :logo="mydata.logo.url" :city="mydata.city" />
+    <product :product="produ" v-for="(produ, index) in mydata.products" :key="index" />
     <encouragement :encouragement="mydata.encouragement" />
-    <offCode v-if="mydata.store.offcode == true"/>
-    <faktor :faktor="mydata.faktor" />
+    <offCode />
+    <factor :factor="mydata.factor" />
   </div>
 </template>
 
@@ -12,7 +12,7 @@
 import store from "@/components/Body/store/store.vue";
 import product from "@/components/Body/product/product.vue";
 import encouragement from "@/components/Body/encouragement/encouragement.vue";
-import faktor from "@/components/Body/faktor/faktor.vue";
+import factor from "@/components/Body/factor/factor.vue";
 import offCode from "@/components/Body/off-code/off-code.vue";
 
 export default {
@@ -20,18 +20,15 @@ export default {
     store,
     product,
     encouragement,
-    faktor,
-    offCode
-   },
+    factor,
+    offCode,
+  },
   props: {
     mydata: {
       type: Object,
       required: true,
     },
   },
-  mounted() {
-    console.log(this.mydata.store.offCode);
-  }
-}
+};
 </script>
 <style/>

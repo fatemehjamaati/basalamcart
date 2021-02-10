@@ -1,93 +1,99 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import mydata2 from "@/components/Body/mydata.json";
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
-    data:mydata2,
+    data: [],
   },
 
-  getters:{
-    total(state){
-      return state.data.reduce((a,c) => {
-        let vendorsum = c.product.reduce((a,b)=> a + b.afterprice * b.count ,0);
-        return a +vendorsum;
-      },0);
+  getters: {
+    data(state) {
+      return state.data;
     },
-    totalCount(state){
-      return state.data.reduce((a,c) => {
-        let vendorsum = c.product.reduce((a,b)=> a + b.count ,0);
-        return a +vendorsum;
-      },0);
+    total(state) {
+      return state.data.reduce((a, c) => {
+        let vendorsum = c.products.reduce((a, b) => a + b.price * b.count, 0);
+        return a + vendorsum;
+      }, 0);
+    },
+    totalCount(state) {
+      return state.data.reduce((a, c) => {
+        let vendorsum = c.products.reduce((a, b) => a + b.count, 0);
+        return a + vendorsum;
+      }, 0);
     },
 
-    sumproduct(state){
+    sumproduct(state) {
       state.data.forEach((vendor) => {
-        vendor.faktor.totalPrice = vendor.product.reduce(
-          (total, item) => {
-            return total + item.count * item.afterprice;
-          },
-          0
-        );
-        vendor.faktor.count = vendor.product.reduce(
-          (total, item) => {
-            return total + item.count ;
-          },
-          0
-        );
+        vendor.totalPrice = vendor.products.reduce((total, item) => {
+          return total + item.count * item.price;
+        }, 0);
+        vendor.count = vendor.products.reduce((total, item) => {
+          return total + item.count;
+        }, 0);
       });
-    }
+    },
   },
 
   mutations: {
-    incrementCounter (state,id) {
-      let product=null;
+    inseretData(state, data) {
+      data.forEach((vendor) => {
+        vendor.totalPrice = null;
+        vendor.count = null;
+        vendor.products.forEach((product) => {
+          product.count = 1;
+        });
+      });
+      state.data = data;
+    },
+    incrementCounter(state, id) {
+      let product = null;
       state.data.forEach((vendor) => {
-        product=vendor.product.find((p) => p.id==id);
-        if(product){product.count++;}
-        
+        product = vendor.products.find((p) => p.id == id);
+        if (product)
+          if (product.count < product.stock) {
+            product.count++;
+          }
       });
     },
-    decrementCounter (state,id){
-      let product=null;
+    decrementCounter(state, id) {
+      let product = null;
       state.data.forEach((vendor) => {
-        product=vendor.product.find((p) => p.id==id);
-        if(product){
-          
-          if(product.count>=2) {product.count--;}
+        product = vendor.products.find((p) => p.id == id);
+        if (product) {
+          if (product.count >= 2) {
+            product.count--;
+          }
         }
-        
       });
     },
-    
-    deleteItem (state,id) {
-      let product=null;
+
+    deleteItem(state, id) {
+      let product = null;
       let index = null;
       state.data.forEach((vendor) => {
-        product=vendor.product.find((p) => p.id==id); 
-        index=vendor.product.findIndex((p) => p.id==id);
-        if(product){
-          vendor.product.splice(index,1)
+        product = vendor.products.find((p) => p.id == id);
+        index = vendor.products.findIndex((p) => p.id == id);
+        if (product) {
+          vendor.products.splice(index, 1);
         }
-      
       });
-      
     },
-
   },
 
-
   actions: {
-    incrementCounter(context,a){
-      context.commit("incrementCounter",a)
+    incrementCounter(context, id) {
+      context.commit("incrementCounter", id);
     },
-    decrementCounter (context,b){
-      context.commit("decrementCounter",b)
+    decrementCounter(context, id) {
+      context.commit("decrementCounter", id);
     },
-    deleteItem(context,c){
-      context.commit("deleteItem",c)
-    }
-  }
-  
-  })
+    deleteItem(context, id) {
+      context.commit("deleteItem", id);
+    },
+    inseretData(context, data) {
+      context.commit("inseretData", data);
+    },
+  },
+});

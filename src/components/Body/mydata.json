@@ -1,80 +1,60 @@
-
-  [
-
+ [
     {
-
-      "store": {
-        "storname": "خوشمزه های خاتون",
-        "username": "مینو همگام",
-        "city": "سعادت شهر",
-        "userimg": "https://s16.picofile.com/file/8422060618/avatar1.png",
-        "offcode":true
-        
+      "id": "mp8ubif1f",
+      "name": "غرفه خوراکی‌جات!",
+      "owner": "سیدعلی رضایی",
+      "logo": {
+        "size": "small",
+        "url": "https://statics.basalam.com/public/users/MO2R/1911/Tu8GUFH5ofLWFqUVeGVoVaLhMKxzLYRWIJxuz6m0.jpeg_200X200X70.jpeg"
       },
-
-
-
-      "product": [
-         {"id":"pr1",
-          "count":1,
-          "productname": "سوسیس آلمانی پنیری",
-          "productimg": "https://s17.picofile.com/d/8423310768/81319089-3fc5-4884-ae64-d40d48eb6ea1/sosis_almani_paniri_pic.svg",
-          "price": "85000",
-          "afterprice": "75000"
+      "city": "مشهد",
+      "products": [
+        {
+          "id": "56k1tvjlg",
+          "name": "میوه خشک 150 گرمی",
+          "primaryPrice": 280000,
+          "price": 230000,
+          "stock": 4,
+          "image": {
+            "size": "medium",
+            "url": "https://statics.basalam.com/public/users/jA18W/2012/LQsY8lhQCsESwDosGHCD89OyDnk0skjWzg8Zuj9w.jpeg_512X512X70.jpeg"
+          }
         },
-
-         {"id":"pr2",
-          "count": 1,
-          "productname": "کالباس پسته",
-          "productimg": "https://s16.picofile.com/d/8423310726/c3a8241b-0015-4130-ad7d-cb5a00c28edf/kalbas_peste_pic.svg",
-          "price": "85000",
-          "afterprice": "75000"
+        {
+          "id": "25s0zzjcv",
+          "name": "لواشک کیوی 1 کیلویی اعلاء",
+          "primaryPrice": 220000,
+          "price": 250000,
+          "stock": 1,
+          "image": {
+            "size": "medium",
+            "url": "https://statics.basalam.com/public/users/PYx4z/2007/hcIPn3K7T5u2w2ePdTDHsrdMePTDsn1v1iqJ5VI8.jpeg_512X512X70.jpeg"
+          }
         }
-      ],
-      "encouragement": {
-        "encouragement1": "هورا ارسال از این غرفه برای شما",
-        "encouragement2": "رایگان شد"
-      },
-
-      "faktor": {
-        "count": "3",
-        "totalPrice": "0"
-      }
-
-
+      ]
     },
-
     {
-
-      "store": {
-        "storname": "محصولات غذایی ولیک",
-        "username": "سارا خوشدل",
-        "city": "بوشهر",
-        "userimg": "https://s16.picofile.com/file/8422060634/avatar2.png",
-        "offcode":false
+      "id": "t7u2oc36z",
+      "name": "غرفه محصولات فرهنگی",
+      "owner": "یگانه نیک‌خوی",
+      "logo": {
+        "size": "small",
+        "url": "https://statics.basalam.com/public/users/vgN8n/1910/86nvHJgfwDpxvx43iEQi8ONM4uiFZHgDATuN3WuZ.jpeg_100X100X70.jpeg"
       },
-
-      "product": [
-         {"id":"pr3",
-          "count": 1,
-          "productname": "سوسیس آلمانی پنیری",
-          "productimg": "https://s17.picofile.com/d/8423310768/81319089-3fc5-4884-ae64-d40d48eb6ea1/sosis_almani_paniri_pic.svg",
-          "price": "85000",
-          "afterprice": "75000"
+      "city": "شهر مقدس قم",
+      "products": [
+        {
+          "id": "pp7foybo5",
+          "name": "کتاب فاطمیون حکایت‌های شهدای فاطمیون",
+          "primaryPrice": 400000,
+          "price": 600000,
+          "stock": 1,
+          "image": {
+            "size": "medium",
+            "url": "https://statics.basalam.com/public/users/VKEM/2101/cpROBVKrNXdQTqhvznRCdQxr7DuaE4CALYr1qiTW.jpeg_512X512X70.jpeg"
+          }
         }
-
-      ],
-
-      "encouragement": {
-        "encouragement1": "برای ارسال رایگان ",
-        "encouragement2": "رایگان شد"
-      },
-
-      "faktor": {
-        "count": "1",
-        "totalPrice": "۸۵۰۰۰"
-      }
-
+      ]
     }
   ]
 

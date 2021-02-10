@@ -2,10 +2,10 @@
   <div>
     <header class="header">
       <div class="line1-of-header">
-      <div class="logos">
+        <div class="logos">
           <img src="@/assets/image/logo.png" alt="لوگوی باسلام" class="logo" />
-          <img src="@/assets/image/arrow.svg" class="arrow">
-      </div>
+          <img src="@/assets/image/arrow.svg" class="arrow" />
+        </div>
         <div class="sale">
           <button class="button">فروش در باسلام</button>
           <svg

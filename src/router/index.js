@@ -4,8 +4,8 @@ import addresspage from "@/components/addresspage";
 import PaymentPage from "@/components/PaymentPage";
 
 export const routes = [
-    {path: '/shopcart', component:Body},
-    {path: '/basket', component:basket},
-    {path: '/address', component:addresspage},
-    {path: '/payment', component:PaymentPage},
-]
+  { path: "/", component: Body, name: "home" },
+  { path: "/basket", component: basket },
+  { path: "/address", component: addresspage, name: "address" },
+  { path: "/payment", component: PaymentPage },
+];

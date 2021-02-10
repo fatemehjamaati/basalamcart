@@ -2,34 +2,29 @@
   <div class="selectadd">
     <div class="manageadd">
       <div class="address">
-        <img
-          src="@/assets/image/backicon.svg"
-          @click="back"
-          alt=""
-          class="back"
-        />
+        <img src="@/assets/image/backicon.svg" @click="back" alt class="back" />
         <span class="add">آدرس ارسال</span>
       </div>
 
       <button class="newaddress">
-        <img src="@/assets/image/Vector.svg" alt="" class="plus" />آدرس جدید
+        <img src="@/assets/image/Vector.svg" alt class="plus" />آدرس جدید
       </button>
     </div>
 
     <div class="radio">
       <input type="radio" id="input" class="input" name="radio" checked />
-      <span class="checkmark"></span>
-      <label for="input"> </label>
-      <addressSelecte/>  
+      <!-- <span class="checkmark"></span> -->
+      <label for="input"></label>
+      <addressSelecte />
     </div>
     <div class="radio">
       <input type="radio" id="input2" class="input" name="radio" />
-      <span class="checkmark"></span>
+      <!-- <span class="checkmark"></span> -->
       <label for="input2">
-        <addressSelecte/> 
+        <addressSelecte />
       </label>
     </div>
-    <continu/>
+    <continu />
   </div>
 </template>
 
@@ -42,13 +37,12 @@ export default {
     addressSelecte,
     continu,
   },
-   methods: {
-      back() {
-        return this.$router.push({ name: "shopcart" });
-      },
+  methods: {
+    back() {
+      return this.$router.push({ name: "home" });
     },
+  },
 };
 </script>
 
-<style src="@/components/addresspage/addresspage.css">
-</style>
+<style src="@/components/addresspage/addresspage.css"/>

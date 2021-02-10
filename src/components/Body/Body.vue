@@ -1,28 +1,27 @@
 <template>
   <div>
-    
-    <vendor :mydata="dataa" v-for="(dataa, index) in myJson" :key="index" />
+    <vendor :mydata="dataa" v-for="(dataa, index) in data" :key="index" />
     <buttomfixed />
   </div>
 </template>
 
-
 <script>
-
 import vendor from "@/components/Body/vendor/vendor.vue";
 import buttomfixed from "@/components/Body/buttomfixed/buttomfixed.vue";
-import mydata2 from "@/components/Body/mydata.json";
 export default {
   components: {
-    
     vendor,
     buttomfixed,
   },
-  data() {
-    return {
-      myJson:mydata2
-    }
-  }
-}
+  computed: {
+    data() {
+      return this.$store.getters.data;
+    },
+  },
+  created() {
+    this.$store.commit("addCount");
+  },
+};
 </script>
+
 <style scoped src="@/components/Body/Body.css"/>
